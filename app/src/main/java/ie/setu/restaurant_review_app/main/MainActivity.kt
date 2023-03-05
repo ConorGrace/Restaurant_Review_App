@@ -1,8 +1,9 @@
-package ie.setu.restaurant_review_app
+package ie.setu.restaurant_review_app.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import ie.setu.restaurant_review_app.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

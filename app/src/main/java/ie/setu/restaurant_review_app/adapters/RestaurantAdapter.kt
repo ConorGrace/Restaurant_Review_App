@@ -10,7 +10,7 @@ interface RestaurantListener {
     fun onRestaurantClick(restaurant: RestaurantModel)
 }
 
-class RestaurantAdapter constructor(private var restaurants: RestaurantModel,
+class RestaurantAdapter constructor(private var restaurants: List<RestaurantModel>,
                                    private val listener: RestaurantListener) :
     RecyclerView.Adapter<RestaurantAdapter.MainHolder>() {
 

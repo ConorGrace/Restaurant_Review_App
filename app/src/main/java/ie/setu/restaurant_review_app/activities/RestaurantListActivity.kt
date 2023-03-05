@@ -15,7 +15,7 @@ import ie.setu.restaurant_review_app.databinding.ActivityRestaurantListBinding
 import ie.setu.restaurant_review_app.main.MainApp
 import ie.setu.restaurant_review_app.models.RestaurantModel
 
-class RestaurantListActivity : AppCompatActivity(), RestaurantActivity {
+class RestaurantListActivity : AppCompatActivity(), RestaurantListener {
 
     lateinit var app: MainApp
     private lateinit var binding: ActivityRestaurantListBinding
@@ -59,7 +59,7 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantActivity {
             }
         }
 
-    override fun onPlacemarkClick(restaurant: RestaurantModel) {
+    override fun onRestaurantClick(restaurant: RestaurantModel) {
         val launcherIntent = Intent(this, RestaurantActivity::class.java)
         launcherIntent.putExtra("restaurant_edit", restaurant)
         getClickResult.launch(launcherIntent)

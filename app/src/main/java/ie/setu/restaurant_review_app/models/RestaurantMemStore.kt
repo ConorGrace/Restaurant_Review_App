@@ -23,7 +23,7 @@ class RestaurantMemStore : RestaurantStore {
     }
 
     override fun update(restaurant: RestaurantModel) {
-        var foundRestaurant: RestaurantModel? = restaurants.find { r -> r.id == restaurant.id }
+        var foundRestaurant: RestaurantModel? = restaurants.find { p -> p.id == restaurant.id }
         if (foundRestaurant != null) {
             foundRestaurant.title = restaurant.title
             foundRestaurant.description = restaurant.description

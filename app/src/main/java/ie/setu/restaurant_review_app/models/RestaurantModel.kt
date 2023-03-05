@@ -6,4 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class RestaurantModel(var id: Long = 0,
                           var title: String = "",
-                          var description: String = "") : Parcelable
+                          var description: String = "",
+                           var type: String = "",
+                           var rating: String = "",
+                           var telephone: String = "",) : Parcelable

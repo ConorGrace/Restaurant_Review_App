@@ -27,10 +27,16 @@ class RestaurantMemStore : RestaurantStore {
         if (foundRestaurant != null) {
             foundRestaurant.title = restaurant.title
             foundRestaurant.description = restaurant.description
+            foundRestaurant.type = restaurant.type
+            foundRestaurant.rating = restaurant.rating
+            foundRestaurant.telephone = restaurant.telephone
             logAll()
         }
     }
 
+    override fun delete(restaurant: RestaurantModel) {
+        restaurants.remove(restaurant)
+    }
     private fun logAll() {
         restaurants.forEach { i("$it") }
     }

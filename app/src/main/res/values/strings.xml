@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Restaurant Review App</string>
+    <string name="hint_RestaurantTitle">Restaurant Title</string>
+    <string name="hint_RestaurantDescription">Description </string>
+    <string name="menu_addRestaurant">Add</string>
+    <string name="menu_cancelRestaurant">Cancel</string>
 </resources>

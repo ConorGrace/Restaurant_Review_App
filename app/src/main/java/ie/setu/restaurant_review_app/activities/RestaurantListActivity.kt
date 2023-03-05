@@ -1,6 +1,7 @@
 package ie.setu.restaurant_review_app.activities
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -26,6 +27,7 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantListener {
         setContentView(binding.root)
         binding.toolbar.title = title
         setSupportActionBar(binding.toolbar)
+        binding.recyclerView.setOnLongClickListener { true }
 
         app = application as MainApp
 
@@ -74,4 +76,17 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantListener {
                 notifyItemRangeChanged(0,app.restaurants.findAll().size)
             }
         }
+
+    override fun onRestaurantLongClick(restaurant: RestaurantModel) {
+        AlertDialog.Builder(this)
+            .setTitle("Delete Restaurant")
+            .setMessage("Are you sure you want to delete ${restaurant.title}?")
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setPositiveButton(android.R.string.yes) { _, _ ->
+                app.restaurants.delete(restaurant)
+                (binding.recyclerView.adapter as RestaurantAdapter).removeRestaurant(restaurant)
+            }
+            .setNegativeButton(android.R.string.no, null)
+            .show()
+    }
 }

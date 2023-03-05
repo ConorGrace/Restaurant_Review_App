@@ -26,6 +26,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/restaurantTitle"
             tools:text="A Description" />
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            tools:text="A Description" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

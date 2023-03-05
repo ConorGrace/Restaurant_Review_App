@@ -25,7 +25,7 @@ class RestaurantActivity : AppCompatActivity() {
         binding = ActivityRestaurantBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.toolbarAdd.title = title
-        setSupportActionBar(binding.toolbarAdd)
+        //setSupportActionBar(binding.toolbarAdd)
 
         app = application as MainApp
 
@@ -35,11 +35,17 @@ class RestaurantActivity : AppCompatActivity() {
             restaurant = intent.extras?.getParcelable("restaurant_edit")!!
             binding.restaurantTitle.setText(restaurant.title)
             binding.description.setText(restaurant.description)
+            binding.description.setText(restaurant.type)
+            binding.description.setText(restaurant.rating)
+            binding.description.setText(restaurant.telephone)
         }
 
         binding.btnAdd.setOnClickListener() {
             restaurant.title = binding.restaurantTitle.text.toString()
             restaurant.description = binding.description.text.toString()
+            restaurant.type = binding.description.text.toString()
+            restaurant.rating = binding.description.text.toString()
+            restaurant.telephone = binding.description.text.toString()
             if (restaurant.title.isNotEmpty()) {
                 app.restaurants.create(restaurant.copy())
                 i("add Button Pressed: ${restaurant}")
@@ -67,4 +73,6 @@ class RestaurantActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 }

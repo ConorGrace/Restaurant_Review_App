@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.setu.restaurant_review_app.activities.PlacemarkActivity">
+    tools:context="ie.setu.restaurant_review_app.activities.RestaurantActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -41,12 +41,12 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/placemarkTitle"
+                    android:id="@+id/restaurantTitle"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
                     android:autofillHints=""
-                    android:hint="@string/hint_restaurantTitle"
+                    android:hint="restaurantTitle"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:hint="@string/hint_restaurantDescription"
+                    android:hint="restaurantDescription"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"

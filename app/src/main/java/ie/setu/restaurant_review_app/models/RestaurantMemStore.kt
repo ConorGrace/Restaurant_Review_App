@@ -17,7 +17,7 @@ class RestaurantMemStore : RestaurantStore {
     }
 
     override fun create(restaurant: RestaurantModel) {
-        restaurants.id = getId()
+        restaurant.id = getId()
         restaurants.add(restaurant)
         logAll()
     }
